@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 4a8b2ef769af7452c8facc6b06f8b005
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Droid Serif
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e354e5d7305a740b48ac7f29e9d9d051, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
