@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager>
 
     public bool GameOver;
 
-    public Tannoy tannoy;
+    public Tannoy[] tannoy;
 
     public IEnumerator Start()
     {
@@ -42,15 +42,21 @@ public class GameManager : Singleton<GameManager>
     {
         yield return new WaitForSeconds(5f);
 
-        tannoy.PlayAnnouncement(tannoy.delayClip);
+        PlayAnnouncement(tannoy[0].delayClip);
 
         yield return new WaitForSeconds(10f);
 
-        tannoy.PlayAnnouncement(tannoy.sunderlandClip);
+        PlayAnnouncement(tannoy[0].sunderlandClip);
 
         yield return new WaitForSeconds(10f);
 
-        tannoy.PlayAnnouncement(tannoy.universityClip);
+       PlayAnnouncement(tannoy[0].universityClip);
+    }
+
+    public void PlayAnnouncement(AudioClip clip)
+    {
+        foreach (Tannoy t in tannoy)
+            t.PlayAnnouncement(clip);
     }
 
     public void Pause()

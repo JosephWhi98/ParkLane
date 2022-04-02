@@ -46,7 +46,7 @@ public class LockedNavigation : MonoBehaviour
 
         if (Mathf.Abs(input) > 0f && Time.unscaledTime > nextInput)
         {
-            nextInput = Time.unscaledTime + 0.2f;
+            nextInput = Time.unscaledTime + 0.6f;
 
             buttons[currentSelected].MouseExit();
 
