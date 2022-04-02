@@ -42,24 +42,27 @@ public class GameManager : Singleton<GameManager>
 
     public IEnumerator GameRoutine()
     {
+        yield return new WaitForSeconds(15f);
+
+        PlayAnnouncement(tannoy[0].universityClip);
+
         yield return new WaitForSeconds(5f);
 
-        PlayAnnouncement(tannoy[0].delayClip);
-        trainPlatform2.TrainPassNoStop();
-
-        yield return new WaitForSeconds(10f);
-        trainPlatform1.TrainStop();
-
-        PlayAnnouncement(tannoy[0].sunderlandClip);
+        trainPlatform2.TrainStop();
 
         yield return new WaitForSeconds(15f);
 
-        trainPlatform1.TrainStart();
+        trainPlatform2.TrainStart();
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(25f);
+
+        PlayAnnouncement(tannoy[0].delayClip);
+
+        yield return new WaitForSeconds(25f);
+
+
         trainPlatform2.TrainPassNoStop();
 
-        PlayAnnouncement(tannoy[0].universityClip);
     }
 
     public void PlayAnnouncement(AudioClip clip)
