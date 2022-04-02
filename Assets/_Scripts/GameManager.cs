@@ -26,6 +26,8 @@ public class GameManager : Singleton<GameManager>
     public bool GameOver;
 
     public Tannoy[] tannoy;
+    public Train trainPlatform1;
+    public Train trainPlatform2;
 
     public IEnumerator Start()
     {
@@ -43,14 +45,21 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitForSeconds(5f);
 
         PlayAnnouncement(tannoy[0].delayClip);
+        trainPlatform2.TrainPassNoStop();
 
         yield return new WaitForSeconds(10f);
+        trainPlatform1.TrainStop();
 
         PlayAnnouncement(tannoy[0].sunderlandClip);
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(15f);
 
-       PlayAnnouncement(tannoy[0].universityClip);
+        trainPlatform1.TrainStart();
+
+        yield return new WaitForSeconds(10f);
+        trainPlatform2.TrainPassNoStop();
+
+        PlayAnnouncement(tannoy[0].universityClip);
     }
 
     public void PlayAnnouncement(AudioClip clip)
