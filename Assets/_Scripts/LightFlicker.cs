@@ -22,15 +22,17 @@ public class LightFlicker : MonoBehaviour
 
     private MaterialPropertyBlock propBlock;
 
+    public bool flickering; 
+
     public bool on
     {
         get
         {
-            return light.gameObject.activeInHierarchy;
+            return light.enabled;
         }
         set
         {
-            light.gameObject.SetActive(value);
+            light.enabled = value;
         }
     }
 
@@ -44,23 +46,26 @@ public class LightFlicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // pop off an item if too big
-        while (smoothQueue.Count >= smoothing)
+        if (flickering)
         {
-            lastSum -= smoothQueue.Dequeue();
+            // pop off an item if too big
+            while (smoothQueue.Count >= smoothing)
+            {
+                lastSum -= smoothQueue.Dequeue();
+            }
+
+            // Generate random new item, calculate new average
+            float newVal = Random.Range(minIntensity, maxIntensity);
+            smoothQueue.Enqueue(newVal);
+            lastSum += newVal;
+
+            // Calculate new smoothed average
+            light.intensity = lastSum / (float)smoothQueue.Count;
         }
-
-        // Generate random new item, calculate new average
-        float newVal = Random.Range(minIntensity, maxIntensity);
-        smoothQueue.Enqueue(newVal);
-        lastSum += newVal;
-
-        // Calculate new smoothed average
-        light.intensity = lastSum / (float)smoothQueue.Count;
 
         renderer.GetPropertyBlock(propBlock); 
         // Assign our new value.
-        propBlock.SetColor("_EmissionColor", Color.Lerp(Color.white, Color.black, light.intensity));
+        propBlock.SetColor("_EmissionColor", Color.Lerp(Color.white, Color.black, light.enabled ? light.intensity : 1));
         // Apply the edited values to the renderer.
         renderer.SetPropertyBlock(propBlock);
     }

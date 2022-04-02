@@ -29,6 +29,9 @@ public class GameManager : Singleton<GameManager>
     public Train trainPlatform1;
     public Train trainPlatform2;
 
+    public GameObject manSighting1;
+    public LightFlicker lightFlicker1; 
+
     public IEnumerator Start()
     {
         playing = false;
@@ -52,9 +55,30 @@ public class GameManager : Singleton<GameManager>
 
         yield return new WaitForSeconds(15f);
 
+        manSighting1.SetActive(true);
+
         trainPlatform2.TrainStart();
 
-        yield return new WaitForSeconds(25f);
+        yield return new WaitForSeconds(6f);
+
+        lightFlicker1.flickering = true;
+
+        yield return new WaitForSeconds(5f);
+
+        lightFlicker1.flickering = false;
+        lightFlicker1.on = false;
+
+        yield return new WaitForSeconds(0.5f);
+
+        manSighting1.SetActive(false);
+
+        yield return new WaitForSeconds(2f);
+
+        lightFlicker1.on = true;
+
+        yield return new WaitForSeconds(1f);
+
+        lightFlicker1.flickering = true;
 
         PlayAnnouncement(tannoy[0].delayClip);
 
@@ -62,6 +86,39 @@ public class GameManager : Singleton<GameManager>
 
 
         trainPlatform2.TrainPassNoStop();
+
+        yield return new WaitForSeconds(25f);
+
+        Debug.Log("A loud noise, a snarl and the pattering of footsteps across the other side of the station");
+
+        yield return new WaitForSeconds(5f);
+
+        lightFlicker1.flickering = false;
+
+        yield return new WaitForSeconds(1f);
+
+        lightFlicker1.on = false;
+
+        PlayAnnouncement(tannoy[0].delayClip);
+
+        yield return new WaitForSeconds(3f);
+
+
+        lightFlicker1.on = true;
+        manSighting1.SetActive(true);
+
+
+        yield return new WaitForSeconds(5f);
+
+        lightFlicker1.flickering = true;
+
+        yield return new WaitForSeconds(1f);
+
+        lightFlicker1.on = false;
+        manSighting1.SetActive(false);
+
+
+        yield return new WaitForSeconds(15f);
 
     }
 
