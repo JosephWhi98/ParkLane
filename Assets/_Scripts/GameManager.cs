@@ -25,6 +25,8 @@ public class GameManager : Singleton<GameManager>
 
     public bool GameOver;
 
+    public Tannoy tannoy;
+
     public IEnumerator Start()
     {
         playing = false;
@@ -32,6 +34,23 @@ public class GameManager : Singleton<GameManager>
         ScreenFader.Instance.Fade(0, 2f);
         yield return new WaitForSeconds(2f);
         playing = true;
+
+        StartCoroutine(GameRoutine());
+    }
+
+    public IEnumerator GameRoutine()
+    {
+        yield return new WaitForSeconds(5f);
+
+        tannoy.PlayAnnouncement(tannoy.delayClip);
+
+        yield return new WaitForSeconds(10f);
+
+        tannoy.PlayAnnouncement(tannoy.sunderlandClip);
+
+        yield return new WaitForSeconds(10f);
+
+        tannoy.PlayAnnouncement(tannoy.universityClip);
     }
 
     public void Pause()
