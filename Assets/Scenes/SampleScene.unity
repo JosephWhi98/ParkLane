@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 47946470}
   - component: {fileID: 47946469}
   - component: {fileID: 47946468}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,19 +973,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.13
+      value: 0.1264217
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0044642985
+      value: 0.0023328122
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.74
+      value: 0.7489064
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9910714
+      value: 0.9984448
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247896855678, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_fontAsset
@@ -1141,19 +1141,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.13
+      value: 0.1264217
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0044642985
+      value: 0.0023328122
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.74
+      value: 0.7489064
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9910714
+      value: 0.9984448
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249209991364, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: subtitleClip
@@ -1326,7 +1326,7 @@ GameObject:
   - component: {fileID: 94619851}
   - component: {fileID: 94619850}
   - component: {fileID: 94619849}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2751,7 +2751,7 @@ GameObject:
   - component: {fileID: 215576729}
   - component: {fileID: 215576728}
   - component: {fileID: 215576727}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3475,6 +3475,107 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &257647705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -259972160606440404, guid: f0a318a2e39ebac4986841620c9b3de7, type: 3}
+  m_PrefabInstance: {fileID: 257647702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &257647706
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257647705}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 0539228a67c0d5a46b3f167d81e83023, type: 2}
+  m_audioClip: {fileID: 8300000, guid: acaea149a4471ef46bfbf25619d5af97, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!65 &266464337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3500,7 +3601,7 @@ GameObject:
   - component: {fileID: 277104349}
   - component: {fileID: 277104348}
   - component: {fileID: 277104347}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4800,7 +4901,7 @@ GameObject:
   - component: {fileID: 458405477}
   - component: {fileID: 458405476}
   - component: {fileID: 458405475}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7071,7 +7172,7 @@ GameObject:
   - component: {fileID: 783884967}
   - component: {fileID: 783884966}
   - component: {fileID: 783884965}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8230,7 +8331,7 @@ GameObject:
   - component: {fileID: 961171498}
   - component: {fileID: 961171497}
   - component: {fileID: 961171496}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8636,7 +8737,7 @@ GameObject:
   - component: {fileID: 1020534724}
   - component: {fileID: 1020534723}
   - component: {fileID: 1020534722}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10057,7 +10158,7 @@ GameObject:
   - component: {fileID: 1358453057}
   - component: {fileID: 1358453056}
   - component: {fileID: 1358453055}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10429,7 +10530,7 @@ GameObject:
   - component: {fileID: 1412860046}
   - component: {fileID: 1412860045}
   - component: {fileID: 1412860044}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10525,7 +10626,7 @@ GameObject:
   - component: {fileID: 1464421054}
   - component: {fileID: 1464421053}
   - component: {fileID: 1464421052}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10824,7 +10925,7 @@ GameObject:
   - component: {fileID: 1538622653}
   - component: {fileID: 1538622652}
   - component: {fileID: 1538622651}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12117,7 +12218,7 @@ GameObject:
   - component: {fileID: 1707775388}
   - component: {fileID: 1707775387}
   - component: {fileID: 1707775386}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12336,6 +12437,10 @@ PrefabInstance:
       propertyPath: stingSource
       value: 
       objectReference: {fileID: 1981333283}
+    - target: {fileID: 8522950119257074149, guid: 041f9fe18258b4d47b11a5f0f472de8a, type: 3}
+      propertyPath: eatingSource
+      value: 
+      objectReference: {fileID: 257647706}
     - target: {fileID: 8522950119257074149, guid: 041f9fe18258b4d47b11a5f0f472de8a, type: 3}
       propertyPath: manSighting1
       value: 
@@ -13097,7 +13202,7 @@ GameObject:
   - component: {fileID: 1827208526}
   - component: {fileID: 1827208525}
   - component: {fileID: 1827208524}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14584,7 +14689,7 @@ GameObject:
   - component: {fileID: 2037748515}
   - component: {fileID: 2037748514}
   - component: {fileID: 2037748513}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Graffiti (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -44,6 +44,8 @@ public class GameManager : Singleton<GameManager>
 
     public AudioSource comotionSource;
 
+    public AudioSource eatingSource; 
+
     public AudioSource comotion2Source;
     public AudioSource pidgeonSource;
 
@@ -165,6 +167,7 @@ public class GameManager : Singleton<GameManager>
 
         lightFlicker1.on = true;
         manSighting1.SetActive(true);
+        eatingSource.Play();
         manSighting1Animator.SetTrigger("Sighting 2");
 
         while (!Helpers.LineOfSight(Camera.main.transform, manSighting1.transform, 30f))
@@ -178,7 +181,11 @@ public class GameManager : Singleton<GameManager>
 
         manSighting1Animator.SetTrigger("Sighting 2 Seen");
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+
+        eatingSource.Stop();
+
+        yield return new WaitForSeconds(2f);
 
         lightFlicker1.flickering = true;
 
