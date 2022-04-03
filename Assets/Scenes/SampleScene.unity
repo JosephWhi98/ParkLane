@@ -973,19 +973,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.1264217
+      value: 0.002187236
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0023328122
+      value: 0.0023337114
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.7489064
+      value: 0.9973753
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9984448
+      value: 0.9976663
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247896855678, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_fontAsset
@@ -1141,19 +1141,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.1264217
+      value: 0.002187236
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0023328122
+      value: 0.0023337114
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.7489064
+      value: 0.9973753
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9984448
+      value: 0.9976663
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249209991364, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: subtitleClip
@@ -1860,7 +1860,7 @@ GameObject:
   - component: {fileID: 109041513}
   - component: {fileID: 109041512}
   - component: {fileID: 109041511}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9935,7 +9935,7 @@ GameObject:
   - component: {fileID: 1308833963}
   - component: {fileID: 1308833962}
   - component: {fileID: 1308833961}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
