@@ -55,15 +55,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Aim"",
-                    ""type"": ""Button"",
-                    ""id"": ""c4f48f38-da98-4ef8-9936-da3fc327909b"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Running"",
                     ""type"": ""Button"",
                     ""id"": ""39515bdc-fc74-4638-ba20-a339cf067b3e"",
@@ -73,27 +64,9 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Fire"",
-                    ""type"": ""Button"",
-                    ""id"": ""d384352b-f6da-4c84-ba4d-5716ac967dc6"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Pause"",
                     ""type"": ""Button"",
                     ""id"": ""c85e5e45-2d40-466e-aa7b-363695a451f7"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Reload"",
-                    ""type"": ""Button"",
-                    ""id"": ""a345cb21-b95a-4f4e-b6e3-d7ade04adb59"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press"",
@@ -286,28 +259,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cce38982-f5c1-452e-b31f-b6fa0be7d094"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Aim"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c2895bbd-e007-4075-b610-d275ebff5b17"",
-                    ""path"": ""<Mouse>/rightButton"",
-                    ""interactions"": ""Press(behavior=2)"",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Aim"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""be895905-bb65-4873-b57a-a02d8767afb5"",
                     ""path"": ""<Gamepad>/leftStickPress"",
                     ""interactions"": """",
@@ -330,28 +281,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""05cfca10-abe2-455f-a943-82feae334e8e"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""7b407806-ed38-4f5d-a5bd-c1c0de4dc5e2"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Fire"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""a62673e6-b60f-4793-8a6b-892c03faf1fb"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
@@ -369,28 +298,6 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Controller"",
                     ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2bfd7ff5-9aa1-4385-97a0-d864fa87d8f5"",
-                    ""path"": ""<Keyboard>/r"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard"",
-                    ""action"": ""Reload"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b3cfd47d-0fce-40a0-815d-e9f3c64697fd"",
-                    ""path"": ""<Gamepad>/buttonWest"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Reload"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -487,11 +394,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         m_Main_Move = m_Main.FindAction("Move", throwIfNotFound: true);
         m_Main_Look = m_Main.FindAction("Look", throwIfNotFound: true);
         m_Main_Interact = m_Main.FindAction("Interact", throwIfNotFound: true);
-        m_Main_Aim = m_Main.FindAction("Aim", throwIfNotFound: true);
         m_Main_Running = m_Main.FindAction("Running", throwIfNotFound: true);
-        m_Main_Fire = m_Main.FindAction("Fire", throwIfNotFound: true);
         m_Main_Pause = m_Main.FindAction("Pause", throwIfNotFound: true);
-        m_Main_Reload = m_Main.FindAction("Reload", throwIfNotFound: true);
         m_Main_UIController = m_Main.FindAction("UIController", throwIfNotFound: true);
         m_Main_UIControllerSelect = m_Main.FindAction("UIControllerSelect", throwIfNotFound: true);
     }
@@ -556,11 +460,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Main_Move;
     private readonly InputAction m_Main_Look;
     private readonly InputAction m_Main_Interact;
-    private readonly InputAction m_Main_Aim;
     private readonly InputAction m_Main_Running;
-    private readonly InputAction m_Main_Fire;
     private readonly InputAction m_Main_Pause;
-    private readonly InputAction m_Main_Reload;
     private readonly InputAction m_Main_UIController;
     private readonly InputAction m_Main_UIControllerSelect;
     public struct MainActions
@@ -570,11 +471,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Main_Move;
         public InputAction @Look => m_Wrapper.m_Main_Look;
         public InputAction @Interact => m_Wrapper.m_Main_Interact;
-        public InputAction @Aim => m_Wrapper.m_Main_Aim;
         public InputAction @Running => m_Wrapper.m_Main_Running;
-        public InputAction @Fire => m_Wrapper.m_Main_Fire;
         public InputAction @Pause => m_Wrapper.m_Main_Pause;
-        public InputAction @Reload => m_Wrapper.m_Main_Reload;
         public InputAction @UIController => m_Wrapper.m_Main_UIController;
         public InputAction @UIControllerSelect => m_Wrapper.m_Main_UIControllerSelect;
         public InputActionMap Get() { return m_Wrapper.m_Main; }
@@ -595,21 +493,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Interact.started -= m_Wrapper.m_MainActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnInteract;
-                @Aim.started -= m_Wrapper.m_MainActionsCallbackInterface.OnAim;
-                @Aim.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnAim;
-                @Aim.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnAim;
                 @Running.started -= m_Wrapper.m_MainActionsCallbackInterface.OnRunning;
                 @Running.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnRunning;
                 @Running.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnRunning;
-                @Fire.started -= m_Wrapper.m_MainActionsCallbackInterface.OnFire;
-                @Fire.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnFire;
-                @Fire.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnFire;
                 @Pause.started -= m_Wrapper.m_MainActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnPause;
-                @Reload.started -= m_Wrapper.m_MainActionsCallbackInterface.OnReload;
-                @Reload.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnReload;
-                @Reload.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnReload;
                 @UIController.started -= m_Wrapper.m_MainActionsCallbackInterface.OnUIController;
                 @UIController.performed -= m_Wrapper.m_MainActionsCallbackInterface.OnUIController;
                 @UIController.canceled -= m_Wrapper.m_MainActionsCallbackInterface.OnUIController;
@@ -629,21 +518,12 @@ public partial class @Controls : IInputActionCollection2, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
-                @Aim.started += instance.OnAim;
-                @Aim.performed += instance.OnAim;
-                @Aim.canceled += instance.OnAim;
                 @Running.started += instance.OnRunning;
                 @Running.performed += instance.OnRunning;
                 @Running.canceled += instance.OnRunning;
-                @Fire.started += instance.OnFire;
-                @Fire.performed += instance.OnFire;
-                @Fire.canceled += instance.OnFire;
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
-                @Reload.started += instance.OnReload;
-                @Reload.performed += instance.OnReload;
-                @Reload.canceled += instance.OnReload;
                 @UIController.started += instance.OnUIController;
                 @UIController.performed += instance.OnUIController;
                 @UIController.canceled += instance.OnUIController;
@@ -677,11 +557,8 @@ public partial class @Controls : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnAim(InputAction.CallbackContext context);
         void OnRunning(InputAction.CallbackContext context);
-        void OnFire(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnReload(InputAction.CallbackContext context);
         void OnUIController(InputAction.CallbackContext context);
         void OnUIControllerSelect(InputAction.CallbackContext context);
     }

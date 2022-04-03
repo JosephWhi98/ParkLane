@@ -8,7 +8,7 @@ public class Train : MonoBehaviour
     public AudioClip noStopClip;
     public AudioClip StopClip;
     public AudioClip StartClip;
-
+    public AudioClip startBeepClip;
 
     public AudioSource idleLoop; 
 
@@ -20,7 +20,7 @@ public class Train : MonoBehaviour
     }
 
 
-    public IEnumerator TrainPassNoStopRoutine()
+    public IEnumerator TrainPassNoStopRoutine() 
     {
         anim.Rebind();
         source.PlayOneShot(noStopClip);
@@ -52,6 +52,8 @@ public class Train : MonoBehaviour
 
     public IEnumerator TrainStartRoutine()
     {
+        source.PlayOneShot(startBeepClip);
+
         anim.SetTrigger("Go");
 
         yield return new WaitForSeconds(2f);

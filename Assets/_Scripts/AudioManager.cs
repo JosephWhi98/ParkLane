@@ -6,23 +6,23 @@ using UnityEngine.Audio;
 public class AudioManager : Singleton<AudioManager>
 {
     public AudioMixer mixer;
+
     public AudioMixerSnapshot open;
     public AudioMixerSnapshot closed;
 
     public void Start()
     {
-        closed.TransitionTo(0f);
-        //DontDestroyOnLoad(this.gameObject);
-        SnapAudioOpen();
+        SnapAudioClose(0f);
+        SnapAudioOpen(1f);
     }
 
-    public void SnapAudioOpen()
+    public void SnapAudioOpen(float time = 1f)
     {
-        open.TransitionTo(1f);
+        open.TransitionTo(time);
     }
 
-    public void SnapAudioClose()
+    public void SnapAudioClose(float time = 1f)
     {
-        closed.TransitionTo(1f);
+        closed.TransitionTo(time);
     }
 }

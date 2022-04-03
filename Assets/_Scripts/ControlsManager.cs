@@ -27,8 +27,6 @@ public class ControlsManager : MonoBehaviour
 
 		InputSystem.onActionChange += OnActionChange;
 
-		//controls.Main.Pause.performed += PausePressed;
-
 		controls.Enable();
 	}
 
@@ -70,8 +68,6 @@ public class ControlsManager : MonoBehaviour
 
 	public void Update()
 	{ 
-
-
 		if (GameManager.Instance)
 		{
 			if (GameManager.Instance.AllowInput)
@@ -87,8 +83,6 @@ public class ControlsManager : MonoBehaviour
 		}
 
 		lockedNav.Input(controls.Main.UIController.ReadValue<float>());
-
-		//Debug.Log(currentScheme.name);
 	}
 
 	public void UISelect(InputAction.CallbackContext ctx)

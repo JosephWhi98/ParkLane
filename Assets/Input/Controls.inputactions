@@ -11,7 +11,8 @@
                     "id": "0ad9bfa2-131e-4513-848b-a73c69de93af",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Look",
@@ -19,7 +20,8 @@
                     "id": "f6828184-583d-4c74-bedc-fa8936390792",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Interact",
@@ -27,15 +29,8 @@
                     "id": "c5659261-8a17-4934-bb61-cb639441a46f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Aim",
-                    "type": "Button",
-                    "id": "c4f48f38-da98-4ef8-9936-da3fc327909b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Running",
@@ -43,15 +38,8 @@
                     "id": "39515bdc-fc74-4638-ba20-a339cf067b3e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press(behavior=2)"
-                },
-                {
-                    "name": "Fire",
-                    "type": "Button",
-                    "id": "d384352b-f6da-4c84-ba4d-5716ac967dc6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
@@ -59,15 +47,8 @@
                     "id": "c85e5e45-2d40-466e-aa7b-363695a451f7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
-                },
-                {
-                    "name": "Reload",
-                    "type": "Button",
-                    "id": "a345cb21-b95a-4f4e-b6e3-d7ade04adb59",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "UIController",
@@ -75,7 +56,8 @@
                     "id": "b9338d44-37ad-4abf-8958-4f0863fa6186",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "UIControllerSelect",
@@ -83,7 +65,8 @@
                     "id": "b9ec8f02-5b32-4df9-9e1e-8f1851d54d23",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -254,28 +237,6 @@
                 },
                 {
                     "name": "",
-                    "id": "cce38982-f5c1-452e-b31f-b6fa0be7d094",
-                    "path": "<Gamepad>/rightTrigger",
-                    "interactions": "Press(behavior=2)",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c2895bbd-e007-4075-b610-d275ebff5b17",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "Press(behavior=2)",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Aim",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "be895905-bb65-4873-b57a-a02d8767afb5",
                     "path": "<Gamepad>/leftStickPress",
                     "interactions": "",
@@ -298,28 +259,6 @@
                 },
                 {
                     "name": "",
-                    "id": "05cfca10-abe2-455f-a943-82feae334e8e",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7b407806-ed38-4f5d-a5bd-c1c0de4dc5e2",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "a62673e6-b60f-4793-8a6b-892c03faf1fb",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -337,28 +276,6 @@
                     "processors": "",
                     "groups": "Controller",
                     "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2bfd7ff5-9aa1-4385-97a0-d864fa87d8f5",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Reload",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b3cfd47d-0fce-40a0-815d-e9f3c64697fd",
-                    "path": "<Gamepad>/buttonWest",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "Reload",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

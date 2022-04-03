@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 public class CameraInteractions : MonoBehaviour
 {
@@ -9,11 +10,10 @@ public class CameraInteractions : MonoBehaviour
     public LayerMask interactableMask;
 
     private InteractableItem cachedInteractable;
-    public GameObject InteractText; 
+    public TMP_Text InteractText; 
 
     void Update()
     {
-        // Ensure the cursor is always locked when set
         if (lockCursor && GameManager.Instance.AllowInput)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -21,7 +21,7 @@ public class CameraInteractions : MonoBehaviour
         }
         else
         {
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.lockState = CursorLockMode.None; 
             Cursor.visible = true;
         }
 
@@ -30,20 +30,26 @@ public class CameraInteractions : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 6f, interactableMask))
         {
             cachedInteractable = hit.transform.GetComponent<InteractableItem>();
+
+            if (cachedInteractable.interactable == false)
+                cachedInteractable = null; 
         }
         else
         {
             cachedInteractable = null; 
         }
 
-        InteractText.SetActive(cachedInteractable != null);
+        if(cachedInteractable)
+            InteractText.text = "['E' TO " +  cachedInteractable.interactionName + "]";
 
-     
+        InteractText.gameObject.SetActive(cachedInteractable != null);
     }
 
     public void TryInteract()
     {
-            if (cachedInteractable != null)
-                cachedInteractable.OnUse();
+        if (cachedInteractable)
+        {
+            cachedInteractable.OnUse();
+        }
     }
 }

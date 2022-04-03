@@ -46,6 +46,6 @@ public class MainMenu : MonoBehaviour
         AudioManager.Instance.SnapAudioClose();
         ScreenFader.Instance.Fade(1, 1.5f);
         yield return new WaitForSecondsRealtime(1.5f);
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("SampleScene");
     }
 }

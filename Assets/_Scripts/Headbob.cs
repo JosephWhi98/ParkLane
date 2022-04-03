@@ -15,8 +15,6 @@ public class Headbob : MonoBehaviour
 
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip footstepClip;
-    bool played = false;
-
     [SerializeField] PlayerController playerController;
 
     void Awake()
@@ -30,6 +28,9 @@ public class Headbob : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.GameOver)
+            return;
+
         if (playerController.isRunning)
         {
             bobSpeed = 7f;
@@ -40,30 +41,27 @@ public class Headbob : MonoBehaviour
             bobSpeed = 4.8f;
             bobAmount = 0.2f;
         }
-            //if (controller.controller.isGrounded)
-            //{
-            if (PlayerController.Instance.moveInput.x != 0 || PlayerController.Instance.moveInput.y != 0) //moving
-            {
-                timer += bobSpeed * Time.deltaTime;
 
-                //use the timer value to set the position
-                Vector3 newPosition = new Vector3(Mathf.Cos(timer) * bobAmount, restPosition.y + Mathf.Abs((Mathf.Sin(timer) * bobAmount)), restPosition.z); //abs val of y for a parabolic path
-                camPos = newPosition;
-                transform.localPosition = camPos;
+        if (PlayerController.Instance.moveInput.x != 0 || PlayerController.Instance.moveInput.y != 0) //moving
+        {
+            timer += bobSpeed * Time.deltaTime;
+
+            //use the timer value to set the position
+            Vector3 newPosition = new Vector3(Mathf.Cos(timer) * bobAmount, restPosition.y + Mathf.Abs((Mathf.Sin(timer) * bobAmount)), restPosition.z); //abs val of y for a parabolic path
+            camPos = newPosition;
+            transform.localPosition = camPos;
  
-            }
-            else
-            {
-                timer = Mathf.PI / 2; //reinitialize
+        }
+        else
+        {
+            timer = Mathf.PI / 2; //reinitialize
 
-                Vector3 newPosition = new Vector3(Mathf.Lerp(camPos.x, restPosition.x, transitionSpeed * Time.deltaTime), Mathf.Lerp(camPos.y, restPosition.y, transitionSpeed * Time.deltaTime), Mathf.Lerp(camPos.z, restPosition.z, transitionSpeed * Time.deltaTime)); //transition smoothly from walking to stopping.
-                camPos = newPosition;
-            }
+            Vector3 newPosition = new Vector3(Mathf.Lerp(camPos.x, restPosition.x, transitionSpeed * Time.deltaTime), Mathf.Lerp(camPos.y, restPosition.y, transitionSpeed * Time.deltaTime), Mathf.Lerp(camPos.z, restPosition.z, transitionSpeed * Time.deltaTime)); //transition smoothly from walking to stopping.
+            camPos = newPosition;
+        }
 
-            if (timer > Mathf.PI * 2) //completed a full cycle on the unit circle. Reset to 0 to avoid bloated values.
-                timer = 0;
-
-       // }
+        if (timer > Mathf.PI * 2) 
+            timer = 0;
     }
 
     IEnumerator FootstepRoutine()
