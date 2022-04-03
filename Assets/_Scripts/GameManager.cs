@@ -55,7 +55,9 @@ public class GameManager : Singleton<GameManager>
     public GameObject wetFloorSign1;
     public GameObject wetFloorSign2;
 
-    public GameObject ticketMachineHand; 
+    public GameObject ticketMachineHand;
+
+    public Collider ticketHandPrintTrigger;
 
     public IEnumerator Start()
     {
@@ -75,7 +77,7 @@ public class GameManager : Singleton<GameManager>
 
     public IEnumerator GameRoutine()
     {
-        float getTicketTime = Time.time + 15f;
+        float getTicketTime = Time.time + 15f; 
 
         while (!gotTicket)
         {
@@ -240,7 +242,12 @@ public class GameManager : Singleton<GameManager>
         ticketMachine.PurchaseTicket();
         ticketMachineHand.gameObject.SetActive(true);
 
-        yield return new WaitForSeconds(15f);
+        while (!ticketHandPrintTrigger.bounds.Contains(player.transform.position) || !Helpers.LineOfSight(Camera.main.transform, ticketMachineHand.transform, 30f))
+            yield return null;
+
+        stingSource.Play(); 
+
+        yield return new WaitForSeconds(25f);
 
         PlayAnnouncement(tannoy[0].sunderlandClip);
 

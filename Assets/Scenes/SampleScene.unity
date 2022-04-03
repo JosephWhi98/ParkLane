@@ -973,19 +973,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.12576687
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0012121212
+      value: 0.0044642985
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.7498296
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.9910714
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247896855678, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_fontAsset
@@ -1141,19 +1141,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.12576687
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0012121212
+      value: 0.0044642985
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.7498296
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.9910714
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249209991364, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: subtitleClip
@@ -5274,8 +5274,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e3fd6ec4398cf479c8e9d1e7f4797718, type: 3}
   m_PrefabInstance: {fileID: 2064067465}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &527464401
-BoxCollider:
+--- !u!64 &527464401
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5284,9 +5284,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7104012, y: 3.5305803, z: 4.578815}
-  m_Center: {x: -0.12302405, y: -0.00000006821944, z: 2.2890646}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5495902117074765545, guid: e3fd6ec4398cf479c8e9d1e7f4797718, type: 3}
 --- !u!82 &527464402
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6324,6 +6325,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 61.987484, y: 12.84031, z: 17.93303}
   m_Center: {x: -5.873968, y: -0.0917449, z: -3.214304}
+--- !u!1 &713131626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 713131627}
+  - component: {fileID: 713131628}
+  m_Layer: 7
+  m_Name: TicketMachineTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &713131627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713131626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.37, y: 4.599592, z: -11.132099}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2109038031}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &713131628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713131626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.170655, y: 12.84031, z: 11.920521}
+  m_Center: {x: 15.988991, y: -0.0917449, z: -0.20804977}
 --- !u!4 &720541240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5788282429679796564, guid: 63a94d43c6feb7145b6606084593e917, type: 3}
@@ -12408,6 +12453,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1764893509}
     - target: {fileID: 8522950119257074149, guid: 041f9fe18258b4d47b11a5f0f472de8a, type: 3}
+      propertyPath: ticketHandPrintTrigger
+      value: 
+      objectReference: {fileID: 713131628}
+    - target: {fileID: 8522950119257074149, guid: 041f9fe18258b4d47b11a5f0f472de8a, type: 3}
       propertyPath: wetFloorSignEndTrigger
       value: 
       objectReference: {fileID: 698093302}
@@ -14794,6 +14843,7 @@ Transform:
   m_Children:
   - {fileID: 499650893}
   - {fileID: 698093301}
+  - {fileID: 713131627}
   m_Father: {fileID: 0}
   m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
