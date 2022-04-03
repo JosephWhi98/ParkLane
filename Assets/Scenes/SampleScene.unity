@@ -429,6 +429,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 78316926}
   preAnnouncementClip: {fileID: 8300000, guid: b94359e5f8113c246b4c002e8c49bc6f, type: 3}
+  notStopping: {fileID: 8300000, guid: 2bf8d6e06ac3c4748b952b332792b30d, type: 3}
+  servicesResuming: {fileID: 8300000, guid: f3ad31a327c36ca4b8d6c1a28e7c2eae, type: 3}
   delayClip: {fileID: 8300000, guid: a90b43e57f91ba2499ea69f78593fc51, type: 3}
   sunderlandClip: {fileID: 8300000, guid: 80df0135992ee0f42a86ea3d2904728c, type: 3}
   universityClip: {fileID: 8300000, guid: eb5b7e4120a20c34fa2b44da594db6e3, type: 3}
@@ -971,19 +973,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.12884927
+      value: 0.12576687
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0057636993
+      value: 0.0012121212
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.74554294
+      value: 0.7498296
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247484304922, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9942363
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6500669247896855678, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_fontAsset
@@ -1139,19 +1141,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.12884927
+      value: 0.12576687
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.0057636993
+      value: 0.0012121212
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.74554294
+      value: 0.7498296
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249160873718, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9942363
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6500669249209991364, guid: 611040e6a2e3f4d0696f5c9909c043f7, type: 3}
       propertyPath: subtitleClip
@@ -2163,6 +2165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 144266499}
   preAnnouncementClip: {fileID: 8300000, guid: b94359e5f8113c246b4c002e8c49bc6f, type: 3}
+  notStopping: {fileID: 8300000, guid: 2bf8d6e06ac3c4748b952b332792b30d, type: 3}
+  servicesResuming: {fileID: 8300000, guid: f3ad31a327c36ca4b8d6c1a28e7c2eae, type: 3}
   delayClip: {fileID: 8300000, guid: a90b43e57f91ba2499ea69f78593fc51, type: 3}
   sunderlandClip: {fileID: 8300000, guid: 80df0135992ee0f42a86ea3d2904728c, type: 3}
   universityClip: {fileID: 8300000, guid: eb5b7e4120a20c34fa2b44da594db6e3, type: 3}
@@ -10987,6 +10991,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   source: {fileID: 1563340363}
   preAnnouncementClip: {fileID: 8300000, guid: b94359e5f8113c246b4c002e8c49bc6f, type: 3}
+  notStopping: {fileID: 8300000, guid: 2bf8d6e06ac3c4748b952b332792b30d, type: 3}
+  servicesResuming: {fileID: 8300000, guid: f3ad31a327c36ca4b8d6c1a28e7c2eae, type: 3}
   delayClip: {fileID: 8300000, guid: a90b43e57f91ba2499ea69f78593fc51, type: 3}
   sunderlandClip: {fileID: 8300000, guid: 80df0135992ee0f42a86ea3d2904728c, type: 3}
   universityClip: {fileID: 8300000, guid: eb5b7e4120a20c34fa2b44da594db6e3, type: 3}

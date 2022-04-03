@@ -157,7 +157,7 @@ public class GameManager : Singleton<GameManager>
 
         lightFlicker1.on = false;
 
-        PlayAnnouncement(tannoy[0].delayClip);
+        PlayAnnouncement(tannoy[0].notStopping);
 
         yield return new WaitForSeconds(3f);
 
@@ -214,6 +214,10 @@ public class GameManager : Singleton<GameManager>
         yield return new WaitForSeconds(15f);
 
         trainPlatform2.TrainStart();
+
+        yield return new WaitForSeconds(10f);
+
+        PlayAnnouncement(tannoy[0].servicesResuming);
 
         yield return new WaitForSeconds(15f);
 

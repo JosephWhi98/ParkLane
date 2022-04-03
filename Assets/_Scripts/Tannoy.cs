@@ -8,6 +8,8 @@ public class Tannoy : MonoBehaviour
 
     public AudioClip preAnnouncementClip;
 
+    public AudioClip notStopping;
+    public AudioClip servicesResuming;
     public AudioClip delayClip;
     public AudioClip sunderlandClip;
     public AudioClip universityClip;
