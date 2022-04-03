@@ -30,7 +30,12 @@ public class GameManager : Singleton<GameManager>
     public Train trainPlatform2;
 
     public GameObject manSighting1;
-    public LightFlicker lightFlicker1; 
+    public LightFlicker lightFlicker1;
+
+    public AudioSource comotionSource;
+    public AudioSource pidgeonSource;
+
+    public GameObject runPastAnimator;
 
     public IEnumerator Start()
     {
@@ -39,6 +44,9 @@ public class GameManager : Singleton<GameManager>
         ScreenFader.Instance.Fade(0, 2f);
         yield return new WaitForSeconds(2f);
         playing = true;
+
+        manSighting1.gameObject.SetActive(false);
+        runPastAnimator.gameObject.SetActive(false);
 
         StartCoroutine(GameRoutine());
     }
@@ -55,15 +63,27 @@ public class GameManager : Singleton<GameManager>
 
         yield return new WaitForSeconds(15f);
 
+        lightFlicker1.on = false;
+
+        yield return new WaitForSeconds(1f);
+
         manSighting1.SetActive(true);
 
         trainPlatform2.TrainStart();
 
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(8f);
+
+        lightFlicker1.on = true;
+
+        yield return new WaitForSeconds(1f);
 
         lightFlicker1.flickering = true;
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3.8f);
+
+        lightFlicker1.source.PlayOneShot(lightFlicker1.flickerOut);
+
+        yield return new WaitForSeconds(1.2f);
 
         lightFlicker1.flickering = false;
         lightFlicker1.on = false;
@@ -82,14 +102,9 @@ public class GameManager : Singleton<GameManager>
 
         PlayAnnouncement(tannoy[0].delayClip);
 
-        yield return new WaitForSeconds(25f);
+        yield return new WaitForSeconds(40f);
 
-
-        trainPlatform2.TrainPassNoStop();
-
-        yield return new WaitForSeconds(25f);
-
-        Debug.Log("A loud noise, a snarl and the pattering of footsteps across the other side of the station");
+        comotionSource.Play();
 
         yield return new WaitForSeconds(5f);
 
@@ -103,23 +118,36 @@ public class GameManager : Singleton<GameManager>
 
         yield return new WaitForSeconds(3f);
 
-
         lightFlicker1.on = true;
         manSighting1.SetActive(true);
 
+        trainPlatform2.TrainPassNoStop();
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
 
         lightFlicker1.flickering = true;
 
-        yield return new WaitForSeconds(1f);
+        lightFlicker1.source.PlayOneShot(lightFlicker1.flickerOut);
 
+        yield return new WaitForSeconds(1.2f);
+
+        lightFlicker1.flickering = false;
         lightFlicker1.on = false;
+
         manSighting1.SetActive(false);
+
+        yield return new WaitForSeconds(5f);
+
+        lightFlicker1.on = true;
+
+        yield return new WaitForSeconds(10f);
+
+        pidgeonSource.Play();
 
 
         yield return new WaitForSeconds(15f);
 
+        runPastAnimator.gameObject.SetActive(true);
     }
 
     public void PlayAnnouncement(AudioClip clip)

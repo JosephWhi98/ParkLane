@@ -6,6 +6,7 @@ public class LightFlicker : MonoBehaviour
 {
     [SerializeField]
     private Light light;
+    private float startIntensity; 
 
     [SerializeField]
     public float minIntensity = 0.1f;
@@ -22,7 +23,10 @@ public class LightFlicker : MonoBehaviour
 
     private MaterialPropertyBlock propBlock;
 
-    public bool flickering; 
+    public bool flickering;
+
+    public AudioSource source;
+    public AudioClip flickerOut; 
 
     public bool on
     {
@@ -33,6 +37,7 @@ public class LightFlicker : MonoBehaviour
         set
         {
             light.enabled = value;
+            light.intensity = startIntensity;
         }
     }
 
@@ -41,6 +46,8 @@ public class LightFlicker : MonoBehaviour
     {
         smoothQueue = new Queue<float>(smoothing);
         propBlock = new MaterialPropertyBlock();
+
+        startIntensity = light.intensity;
     }
 
     // Update is called once per frame
