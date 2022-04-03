@@ -72,7 +72,7 @@ public class LightFlicker : MonoBehaviour
 
         renderer.GetPropertyBlock(propBlock); 
         // Assign our new value.
-        propBlock.SetColor("_EmissionColor", Color.Lerp(Color.white, Color.black, light.enabled ? light.intensity : 1));
+        propBlock.SetColor("_EmissionColor", Color.Lerp(Color.white, Color.black, light.enabled ? Mathf.Clamp01(1 - light.intensity) : 1));
         // Apply the edited values to the renderer.
         renderer.SetPropertyBlock(propBlock);
     }

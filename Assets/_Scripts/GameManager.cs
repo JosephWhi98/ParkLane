@@ -30,23 +30,26 @@ public class GameManager : Singleton<GameManager>
     public Train trainPlatform2;
 
     public GameObject manSighting1;
+    public Animator manSighting1Animator; 
     public LightFlicker lightFlicker1;
 
     public AudioSource comotionSource;
+
+    public AudioSource comotion2Source;
     public AudioSource pidgeonSource;
 
     public GameObject runPastAnimator;
 
     public IEnumerator Start()
     {
+        manSighting1.gameObject.SetActive(false);
+        runPastAnimator.gameObject.SetActive(false);
+
         playing = false;
         yield return new WaitForSeconds(1f);
         ScreenFader.Instance.Fade(0, 2f);
         yield return new WaitForSeconds(2f);
         playing = true;
-
-        manSighting1.gameObject.SetActive(false);
-        runPastAnimator.gameObject.SetActive(false);
 
         StartCoroutine(GameRoutine());
     }
@@ -75,6 +78,9 @@ public class GameManager : Singleton<GameManager>
 
         lightFlicker1.on = true;
 
+        while (!Helpers.LineOfSight(Camera.main.transform, manSighting1.transform, 30f))
+            yield return null;
+
         yield return new WaitForSeconds(1f);
 
         lightFlicker1.flickering = true;
@@ -102,7 +108,7 @@ public class GameManager : Singleton<GameManager>
 
         PlayAnnouncement(tannoy[0].delayClip);
 
-        yield return new WaitForSeconds(40f);
+        yield return new WaitForSeconds(45f);
 
         comotionSource.Play();
 
@@ -120,10 +126,18 @@ public class GameManager : Singleton<GameManager>
 
         lightFlicker1.on = true;
         manSighting1.SetActive(true);
+        manSighting1Animator.SetTrigger("Sighting 2");
+
+        while (!Helpers.LineOfSight(Camera.main.transform, manSighting1.transform, 30f))
+            yield return null;
 
         trainPlatform2.TrainPassNoStop();
 
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(4f);
+
+        manSighting1Animator.SetTrigger("Sighting 2 Seen");
+
+        yield return new WaitForSeconds(4f); 
 
         lightFlicker1.flickering = true;
 
@@ -140,14 +154,27 @@ public class GameManager : Singleton<GameManager>
 
         lightFlicker1.on = true;
 
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(25f);
 
+        comotion2Source.Play();
         pidgeonSource.Play();
 
+        yield return new WaitForSeconds(30f);
+
+        runPastAnimator.gameObject.SetActive(true);
+
+
+        yield return new WaitForSeconds(4f);
+
+        PlayAnnouncement(tannoy[0].universityClip);
+
+        yield return new WaitForSeconds(5f);
+
+        trainPlatform2.TrainStop();
 
         yield return new WaitForSeconds(15f);
 
-        runPastAnimator.gameObject.SetActive(true);
+        trainPlatform2.TrainStart();
     }
 
     public void PlayAnnouncement(AudioClip clip)
